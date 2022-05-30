@@ -1,0 +1,2 @@
+2022-05-30 06:44:41 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-05-30 06:44:41 - Started 12428

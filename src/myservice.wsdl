@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:p1="http://stoller.com.br/senior/contabilizarFolhaPagamento" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="SI_ContabilizarFolhaPagamento_Out" targetNamespace="http://stoller.com.br/senior/contabilizarFolhaPagamento">
+  <wsdl:documentation/>
+  <wsp:UsingPolicy wsdl:required="true"/>
+  <wsp:Policy wsu:Id="OP_SI_ContabilizarFolhaPagamento_Out"/>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://stoller.com.br/senior/contabilizarFolhaPagamento" targetNamespace="http://stoller.com.br/senior/contabilizarFolhaPagamento">
+      <xsd:element name="MT_Document_Post" type="DT_Document_Post"/>
+      <xsd:complexType name="DT_Document_Post">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">58a2f95829c611eb995200000192da46</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="DOCUMENTHEADER">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">f1ad886628d611eb9ca600090ffe0001</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="HEADER_TXT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">f1ad886528d611ebc1e200090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="COMP_CODE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">5880cb3f29c611ebb36200090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="DOC_DATE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">5880cb4029c611ebb0d700090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="PSTNG_DATE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">5880cb4129c611eb84a400090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ITEM" maxOccurs="unbounded">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">f1ad886728d611ebbd3500090ffe0001</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="GL_ACCOUNT" type="xsd:string" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">58810c0929c611eb883d00090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="ITEM_TEXT" type="xsd:string" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">58810c0a29c611ebace700090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="COSTCENTER" type="xsd:string" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">58810c0b29c611eb9fa900090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="GL_DEB_CRED" type="xsd:string" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">58810c0c29c611ebbfcd00090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="AMT_DOCCUR" type="xsd:string" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">58810c0d29c611eb9a9800090ffe0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_Document_Post">
+    <wsdl:documentation/>
+    <wsdl:part name="MT_Document_Post" element="p1:MT_Document_Post"/>
+  </wsdl:message>
+  <wsdl:portType name="SI_ContabilizarFolhaPagamento_Out">
+    <wsdl:documentation/>
+    <wsdl:operation name="SI_ContabilizarFolhaPagamento_Out">
+      <wsdl:documentation/>
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_ContabilizarFolhaPagamento_Out"/>
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_Document_Post"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_ContabilizarFolhaPagamento_OutBinding" type="p1:SI_ContabilizarFolhaPagamento_Out">
+    <soap:binding xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SI_ContabilizarFolhaPagamento_Out">
+      <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="http://sap.com/xi/WebService/soap1.1"/>
+      <wsdl:input>
+        <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_ContabilizarFolhaPagamento_OutService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_ContabilizarFolhaPagamento_OutBinding">
+      <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="http://svr-grc001.stoller.com.br:50200/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_Senior&amp;receiverParty=&amp;receiverService=&amp;interface=SI_ContabilizarFolhaPagamento_Out&amp;interfaceNamespace=http%3A%2F%2Fstoller.com.br%2Fsenior%2FcontabilizarFolhaPagamento"/>
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_ContabilizarFolhaPagamento_OutBinding">
+      <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="https://svr-grc001.stoller.com.br:50201/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_Senior&amp;receiverParty=&amp;receiverService=&amp;interface=SI_ContabilizarFolhaPagamento_Out&amp;interfaceNamespace=http%3A%2F%2Fstoller.com.br%2Fsenior%2FcontabilizarFolhaPagamento"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
