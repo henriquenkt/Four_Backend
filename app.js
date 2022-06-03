@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/documents', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-// teste
+
 // routes
 app.use("/", admin);
 

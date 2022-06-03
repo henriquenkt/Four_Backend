@@ -5,11 +5,15 @@ const crud = require("C:/Users/henri/Desktop/Dev/Cadastro/src/modules/crud");
 const soap = require("soap");
 
 router.get("/", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/cadastro_usuario.html");
+  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/CadastroUsuarios/cadastro_usuario.html");
 });
 
 router.get("/relacao", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/relacao.html");
+  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/CadastroUsuarios/relacao.html");
+});
+
+router.get("/contas", function(req, res) {
+  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/Financas/contas.html");
 });
 
 router.get("/bpm", function(req, res) {

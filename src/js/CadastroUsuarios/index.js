@@ -126,7 +126,8 @@ function alterar() {
   var usuario = document.getElementById('fusu').value;
   var senha = document.getElementById('fsen').value;
   var textoLivre = document.getElementById('ftextolivre').value;
-  reset();
+  //reset();
+  alert("Dados Alterados!");
   var data = JSON.stringify({
     "codigo": codigo,
     "nome": nome,
@@ -166,6 +167,7 @@ function reset() {
 */
 async function anterior() {
   var codigo = document.getElementById('fcodcliente').value;
+  codigo = codigo == ''? codigo = 9999999: codigo;
   const json = JSON.stringify({
     "codigo": codigo
   });
@@ -193,6 +195,7 @@ async function anterior() {
 */
 async function posterior() {
   var codigo = document.getElementById('fcodcliente').value;
+  codigo = codigo == ''? codigo = 0: codigo;
   const json = JSON.stringify({
     "codigo": codigo
   });

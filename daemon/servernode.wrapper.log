@@ -1,2 +1,116 @@
 2022-05-30 06:44:41 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2022-05-30 06:44:41 - Started 12428
+2022-06-01 15:56:43 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-01 15:56:43 - Started 9888
+2022-06-01 19:50:41 - Stopping servernode.exe
+2022-06-01 19:50:41 - ProcessKill 9888
+2022-06-01 19:50:41 - Shutdown exception
+Message:O sistema está sendo desligado.
+
+Stacktrace:   em System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   em System.Management.ManagementScope.InitializeGuts(Object o)
+   em System.Management.ManagementScope.Initialize()
+   em System.Management.ManagementObjectSearcher.Initialize()
+   em System.Management.ManagementObjectSearcher.Get()
+   em winsw.WrapperService.GetChildPids(Int32 pid)
+   em winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   em winsw.WrapperService.StopIt()
+   em winsw.WrapperService.OnShutdown()
+2022-06-01 19:51:33 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-01 19:51:33 - Started 8428
+2022-06-01 19:53:06 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-01 19:53:07 - Started 7432
+2022-06-01 20:15:27 - Stopping servernode.exe
+2022-06-01 20:15:27 - ProcessKill 7432
+2022-06-01 20:15:28 - Found child process: 7952 Name: conhost.exe
+2022-06-01 20:15:28 - Found child process: 8924 Name: node.exe
+2022-06-01 20:15:28 - Stopping process 7952
+2022-06-01 20:15:28 - Send SIGINT 7952
+2022-06-01 20:15:28 - SIGINT to 7952 failed - Killing as fallback
+2022-06-01 20:15:28 - Stopping process 8924
+2022-06-01 20:15:28 - Send SIGINT 8924
+2022-06-01 20:15:28 - SIGINT to 8924 failed - Killing as fallback
+2022-06-01 20:15:28 - Stopping process 7432
+2022-06-01 20:15:28 - Send SIGINT 7432
+2022-06-01 20:15:28 - SIGINT to 7432 failed - Killing as fallback
+2022-06-01 20:15:28 - Finished servernode.exe
+2022-06-01 20:15:31 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-01 20:15:31 - Started 14660
+2022-06-01 20:15:56 - Stopping servernode.exe
+2022-06-01 20:15:56 - ProcessKill 14660
+2022-06-01 20:15:56 - Found child process: 6664 Name: conhost.exe
+2022-06-01 20:15:56 - Found child process: 3796 Name: node.exe
+2022-06-01 20:15:56 - Stopping process 6664
+2022-06-01 20:15:56 - Send SIGINT 6664
+2022-06-01 20:15:56 - SIGINT to 6664 failed - Killing as fallback
+2022-06-01 20:15:57 - Stopping process 3796
+2022-06-01 20:15:57 - Send SIGINT 3796
+2022-06-01 20:15:57 - SIGINT to 3796 failed - Killing as fallback
+2022-06-01 20:15:57 - Stopping process 14660
+2022-06-01 20:15:57 - Send SIGINT 14660
+2022-06-01 20:15:57 - SIGINT to 14660 failed - Killing as fallback
+2022-06-01 20:15:57 - Finished servernode.exe
+2022-06-01 20:15:58 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-01 20:15:58 - Started 15676
+2022-06-01 20:32:07 - Stopping servernode.exe
+2022-06-01 20:32:07 - ProcessKill 15676
+2022-06-01 20:32:07 - Found child process: 17904 Name: conhost.exe
+2022-06-01 20:32:07 - Found child process: 5176 Name: node.exe
+2022-06-01 20:32:07 - Stopping process 17904
+2022-06-01 20:32:07 - Send SIGINT 17904
+2022-06-01 20:32:07 - SIGINT to 17904 failed - Killing as fallback
+2022-06-01 20:32:07 - Stopping process 5176
+2022-06-01 20:32:07 - Send SIGINT 5176
+2022-06-01 20:32:07 - SIGINT to 5176 failed - Killing as fallback
+2022-06-01 20:32:07 - Stopping process 15676
+2022-06-01 20:32:07 - Send SIGINT 15676
+2022-06-01 20:32:07 - SIGINT to 15676 failed - Killing as fallback
+2022-06-01 20:32:07 - Finished servernode.exe
+2022-06-01 22:27:17 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-01 22:27:17 - Started 3436
+2022-06-03 13:02:46 - Stopping servernode.exe
+2022-06-03 13:02:46 - ProcessKill 3436
+2022-06-03 13:02:46 - Found child process: 9544 Name: conhost.exe
+2022-06-03 13:02:46 - Found child process: 5256 Name: node.exe
+2022-06-03 13:02:46 - Stopping process 9544
+2022-06-03 13:02:46 - Send SIGINT 9544
+2022-06-03 13:02:46 - SIGINT to 9544 failed - Killing as fallback
+2022-06-03 13:02:46 - Stopping process 5256
+2022-06-03 13:02:46 - Send SIGINT 5256
+2022-06-03 13:02:46 - SIGINT to 5256 failed - Killing as fallback
+2022-06-03 13:02:46 - Stopping process 3436
+2022-06-03 13:02:46 - Send SIGINT 3436
+2022-06-03 13:02:46 - SIGINT to 3436 failed - Killing as fallback
+2022-06-03 13:02:46 - Finished servernode.exe
+2022-06-03 13:02:50 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-03 13:02:50 - Started 18100
+2022-06-03 13:06:06 - Stopping servernode.exe
+2022-06-03 13:06:06 - ProcessKill 18100
+2022-06-03 13:06:06 - Found child process: 13424 Name: conhost.exe
+2022-06-03 13:06:06 - Found child process: 12084 Name: node.exe
+2022-06-03 13:06:07 - Stopping process 13424
+2022-06-03 13:06:07 - Send SIGINT 13424
+2022-06-03 13:06:07 - SIGINT to 13424 failed - Killing as fallback
+2022-06-03 13:06:07 - Stopping process 12084
+2022-06-03 13:06:07 - Send SIGINT 12084
+2022-06-03 13:06:07 - SIGINT to 12084 failed - Killing as fallback
+2022-06-03 13:06:07 - Stopping process 18100
+2022-06-03 13:06:07 - Send SIGINT 18100
+2022-06-03 13:06:07 - SIGINT to 18100 failed - Killing as fallback
+2022-06-03 13:06:07 - Finished servernode.exe
+2022-06-03 13:12:34 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-03 13:12:34 - Started 16180
+2022-06-03 15:34:15 - Stopping servernode.exe
+2022-06-03 15:34:15 - ProcessKill 16180
+2022-06-03 15:34:15 - Found child process: 10380 Name: conhost.exe
+2022-06-03 15:34:15 - Found child process: 15060 Name: node.exe
+2022-06-03 15:34:15 - Stopping process 10380
+2022-06-03 15:34:15 - Send SIGINT 10380
+2022-06-03 15:34:15 - SIGINT to 10380 failed - Killing as fallback
+2022-06-03 15:34:15 - Stopping process 15060
+2022-06-03 15:34:15 - Send SIGINT 15060
+2022-06-03 15:34:15 - SIGINT to 15060 failed - Killing as fallback
+2022-06-03 15:34:15 - Stopping process 16180
+2022-06-03 15:34:15 - Send SIGINT 16180
+2022-06-03 15:34:15 - SIGINT to 16180 failed - Killing as fallback
+2022-06-03 15:34:15 - Finished servernode.exe

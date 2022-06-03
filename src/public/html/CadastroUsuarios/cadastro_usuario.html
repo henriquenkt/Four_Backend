@@ -8,9 +8,8 @@
 <head>
   <title>Cadastro de Usuários</title>
   <meta charset="utf-8">
-  <script src="/js/index.js" type="text/javascript"></script>
-  <script src="/js/bpm.js" type="text/javascript"></script>
-  <link rel="stylesheet" type="text/css" href="/public/css/styles.css" />
+  <script src="/js/CadastroUsuarios/index.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/public/css/styles.css" /> 
   <link rel="shortcut icon" href="/public/images/ico.fav" />
 </head>
 
@@ -23,39 +22,40 @@
   <button class="btn-senior" type='reset' onclick="window.open ('relacao', '_parent')">Pesquisar</button>
 </br>
 </br>
-<div class="op1" id="form">
+<div class="panel" id="form">
   <form action='#'>
-	  <label class="input" for="fcodcliente">Codigo</label><br>
-    <label class="input" for="fcliente">Cliente</label><br>
-    <label class="input" for="fusucloud">Usuario Cloud</label> <br>
-    <label class="input" for="fsencloud">Senha Cloud</label><br>
-    <label class="input" for="fusu">Usuario</label><br>
-    <label class="input" for="fsen">Senha</label><br>
-	  <label class="input" for="ftextolivre">Texto livre</label><br>
-</div>
-<div class="op2" id="form1">
-    <input class="input" type="text" id="fcodcliente" codigo="fcodcliente" disabled=""><br>
+    <div class="panel" id="form">
+	  <label class="input2" for="fcodcliente">Codigo</label>
+    <input class="input" type="text" id="fcodcliente" codigo="fcodcliente" disabled=""><br> 
+    <label class="input2" for="fcliente">Cliente</label>
     <input class="input" type="text" id="fcliente" cliente="fcliente"><br>
-    <!--<input class="label" type="text" id="busca" onkeyup="pesquisar()" Pesquisar><br> -->
+    <label class="input" for="fusucloud">Usuario Cloud</label>
     <input class="input" type="text" id="fusucloud" usuario="fusucloud"><br>
+    <label class="input" for="fsencloud">Senha Cloud</label>
     <input class="input" type="text" id="fsencloud" senha="fsencloud"><br> 
+    <label class="input" for="fusu">Usuario</label>
     <input class="input" type="text" id="fusu" usuario="fusu"><br> 
+    <label class="input" for="fsen">Senha</label>
     <input class="input" type="text" id="fsen" senha="fsen"><br> 
-    <textarea class="op2" id="ftextolivre" textliv="ftextolivre" rows="10" cols="40" maxlength="500"></textarea>
+	  <label class="input" for="ftextolivre">Texto livre</label>
+    <textarea class="input" id="ftextolivre" textliv="ftextolivre" rows="10" cols="40" maxlength="500"></textarea>
 </div>
+    <!--<input class="label" type="text" id="busca" onkeyup="pesquisar()" Pesquisar><br> -->
+    
 <br>
 &nbsp&nbsp&nbsp&nbsp
 <button class="btn-senior" type='reset' onclick="anterior()" ><<</button>
 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 <button class="btn-senior" type='reset' onclick="posterior()" >>></button>
 
- <script>
+<script>
   const urlParams = new URLSearchParams(window.location.search);
   const codigo = urlParams.get('codigo');
   document.getElementById('fcodcliente').value = codigo;
   cadastro(); 
-  </script>
-  </form>
+</script>
+
+</form>
 </body>
 </html>
 

@@ -52,7 +52,7 @@ function crud(tabela, cadastro, operacao) {
     }
 
     // Busca proximo registro
-    if(operacao == 'next'){        
+    if(operacao == 'next'){  
         resultado = modelo.find({"codigo":{$gt:codigo}}).sort({codigo:1}).limit(1).lean().exec();
     }
 
