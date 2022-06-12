@@ -13,7 +13,7 @@
             ],
             "type": "node"
         },
-      /*  {
+        {
             "address": "hrnk",
             "localRoot": "${workspaceFolder}",
             "name": "Attach to Remote",
@@ -24,7 +24,7 @@
                 "<node_internals>/**"
             ],
             "type": "node"
-        }*/
+        }
         
     ]
 }

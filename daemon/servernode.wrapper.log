@@ -114,3 +114,69 @@ Stacktrace:   em System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInter
 2022-06-03 15:34:15 - Send SIGINT 16180
 2022-06-03 15:34:15 - SIGINT to 16180 failed - Killing as fallback
 2022-06-03 15:34:15 - Finished servernode.exe
+2022-06-03 18:10:55 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-03 18:10:55 - Started 18892
+2022-06-03 18:23:15 - Stopping servernode.exe
+2022-06-03 18:23:15 - ProcessKill 18892
+2022-06-03 18:23:15 - Found child process: 5972 Name: conhost.exe
+2022-06-03 18:23:15 - Found child process: 20276 Name: node.exe
+2022-06-03 18:23:15 - Stopping process 5972
+2022-06-03 18:23:15 - Send SIGINT 5972
+2022-06-03 18:23:15 - SIGINT to 5972 failed - Killing as fallback
+2022-06-03 18:23:15 - Stopping process 20276
+2022-06-03 18:23:15 - Send SIGINT 20276
+2022-06-03 18:23:15 - SIGINT to 20276 failed - Killing as fallback
+2022-06-03 18:23:15 - Stopping process 18892
+2022-06-03 18:23:15 - Send SIGINT 18892
+2022-06-03 18:23:15 - SIGINT to 18892 failed - Killing as fallback
+2022-06-03 18:23:15 - Finished servernode.exe
+2022-06-06 10:03:47 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-06 10:03:47 - Started 13436
+2022-06-06 23:23:10 - Stopping servernode.exe
+2022-06-06 23:23:10 - ProcessKill 13436
+2022-06-06 23:23:11 - Found child process: 22032 Name: conhost.exe
+2022-06-06 23:23:11 - Found child process: 6912 Name: node.exe
+2022-06-06 23:23:11 - Stopping process 22032
+2022-06-06 23:23:11 - Send SIGINT 22032
+2022-06-06 23:23:11 - SIGINT to 22032 failed - Killing as fallback
+2022-06-06 23:23:11 - Stopping process 6912
+2022-06-06 23:23:11 - Send SIGINT 6912
+2022-06-06 23:23:11 - SIGINT to 6912 failed - Killing as fallback
+2022-06-06 23:23:11 - Stopping process 13436
+2022-06-06 23:23:11 - Send SIGINT 13436
+2022-06-06 23:23:11 - SIGINT to 13436 failed - Killing as fallback
+2022-06-06 23:23:11 - Finished servernode.exe
+2022-06-06 23:23:12 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-06 23:23:12 - Started 21396
+2022-06-06 23:27:27 - Stopping servernode.exe
+2022-06-06 23:27:27 - ProcessKill 21396
+2022-06-06 23:27:27 - Found child process: 6900 Name: conhost.exe
+2022-06-06 23:27:27 - Found child process: 19232 Name: node.exe
+2022-06-06 23:27:27 - Stopping process 6900
+2022-06-06 23:27:27 - Send SIGINT 6900
+2022-06-06 23:27:27 - SIGINT to 6900 failed - Killing as fallback
+2022-06-06 23:27:27 - Stopping process 19232
+2022-06-06 23:27:27 - Send SIGINT 19232
+2022-06-06 23:27:27 - SIGINT to 19232 failed - Killing as fallback
+2022-06-06 23:27:27 - Stopping process 21396
+2022-06-06 23:27:27 - Send SIGINT 21396
+2022-06-06 23:27:27 - SIGINT to 21396 failed - Killing as fallback
+2022-06-06 23:27:27 - Finished servernode.exe
+2022-06-07 00:11:43 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-07 00:11:43 - Started 14216
+2022-06-07 22:39:45 - Stopping servernode.exe
+2022-06-07 22:39:45 - ProcessKill 14216
+2022-06-07 22:39:45 - Shutdown exception
+Message:O sistema está sendo desligado.
+
+Stacktrace:   em System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   em System.Management.ManagementScope.InitializeGuts(Object o)
+   em System.Management.ManagementScope.Initialize()
+   em System.Management.ManagementObjectSearcher.Initialize()
+   em System.Management.ManagementObjectSearcher.Get()
+   em winsw.WrapperService.GetChildPids(Int32 pid)
+   em winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   em winsw.WrapperService.StopIt()
+   em winsw.WrapperService.OnShutdown()
+2022-06-07 22:40:39 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Cadastro\app.js --scriptoptions= --log "ServerNode wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2022-06-07 22:40:39 - Started 7540

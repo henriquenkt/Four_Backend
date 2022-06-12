@@ -1,20 +1,13 @@
-const mongoschema = require("C:/Users/henri/Desktop/Dev/Cadastro/src/modules/schema");
+const mongoschema = require("./schema");
+mongoschema();
 
 function crud(tabela, cadastro, operacao) {
- 
-    /*try {
-        mongoschema(); // gera uma exceção
-     }
-     catch (e) {
-        // declarações para manipular quaisquer exceções
-        console.log(e); // passa o objeto de exceção para o manipulador de erro
-     }*/
-        
-  
+      
     const mongoose = require("mongoose");
     var modelo = mongoose.model(tabela);
     var resultado = '';
     var codigo = parseInt(cadastro.codigo);
+    
 
     // Busca registro
     if(operacao == 'find'){

@@ -1,0 +1,25 @@
+function mongoschema() {
+  const mongoose = require("mongoose");
+  var financeiroSchema = mongoose.Schema({
+	data: {
+      type: Date,
+      require: true
+    },
+	tipo: {
+      type: String,
+      require: true
+    },
+	desc: {
+      type: String,
+      require: true
+    },
+	valor: {
+      type: Number,
+      require: true
+    }
+  })
+  //Collection
+  return mongoose.model('contas', financeiroSchema);
+}
+
+module.exports = mongoschema;

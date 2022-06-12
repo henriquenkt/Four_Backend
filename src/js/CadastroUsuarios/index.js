@@ -58,7 +58,6 @@ function pesquisar() {
   }
 
   var busca = document.getElementById('busca').value;
-  //({},{"_id":0, "codigo":1}).sort({codigo:-1})
 
   json = JSON.stringify({
     "nome":

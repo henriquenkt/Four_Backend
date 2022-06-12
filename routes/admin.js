@@ -1,35 +1,28 @@
 const express = require("express");
 const app = express();
 const router = express.Router();
-const crud = require("C:/Users/henri/Desktop/Dev/Cadastro/src/modules/crud");
+const crud = require("../src/modules/CadastroUsuarios/crud");
+const crudFinanceiro = require("../src/modules/Financeiro/crud");
 const soap = require("soap");
 
-router.get("/", function(req, res) {
+bodyParser = require('body-parser');
+router.use(bodyParser.json());
+router.use(bodyParser.text({ type: '*/*' }));
+
+/**
+ * CADASTROS DE USUARIOS
+ */
+
+// Cadastro de usuarios
+ router.get("/", function(req, res) {
   res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/CadastroUsuarios/cadastro_usuario.html");
 });
 
+// Busca cadastros
 router.get("/relacao", function(req, res) {
   res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/CadastroUsuarios/relacao.html");
 });
 
-router.get("/contas", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/Financas/contas.html");
-});
-
-router.get("/bpm", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/bpm.html");
-});
-
-router.get("/ventura", function(req, res) {
-    res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/carregar.html");
-})
-
-router.get("/horas", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/horas.html");
-})
-
-bodyParser = require('body-parser');
-router.use(bodyParser.json());
 
 router.post("/inserir", async function(req, res) {
   var cadastro = req.body;
@@ -76,7 +69,58 @@ router.post("/anterior", async function(req, res) {
   res.send(retorno);
 });
 
-router.use(bodyParser.text({ type: '*/*' }));
+/**
+ * CONTAS
+ */
+
+// Cadastro de contas
+router.get("/contas", function(req, res) {
+  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/Financas/contas.html");
+});
+
+// Busca cadastros
+router.post("/contas/pesquisar", async function(req, res) {
+  var cadastro = req.body;
+  retorno = await crudFinanceiro('contas',cadastro, 'find');
+  res.send(retorno);
+});
+
+router.post("/contas/inserir", async function(req, res) {
+  var cadastro = req.body;
+  await crudFinanceiro('contas',cadastro, 'insert');
+  res.redirect("/");
+  res.end();
+});
+
+router.post("/contas/alterar", async function(req, res) {
+  var cadastro = req.body;
+  await crudFinanceiro('contas',cadastro, 'update');
+  res.redirect("/");
+  res.end();
+});
+
+router.post("/contas/excluir", async function(req, res) {
+  var cadastro = req.body;
+  await crud('contas',cadastro, 'delete');
+  res.redirect("/");
+  res.end();
+});
+
+/**
+ * Outros
+ */
+router.get("/bpm", function(req, res) {
+  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/bpm.html");
+});
+
+router.get("/ventura", function(req, res) {
+    res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/carregar.html");
+})
+
+router.get("/horas", function(req, res) {
+  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/horas.html");
+})
+
 
 router.post("/stoller", async function(req, res) {
   app.use(bodyParser.urlencoded({

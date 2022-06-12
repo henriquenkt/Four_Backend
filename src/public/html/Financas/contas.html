@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.contentWindow.min.js"></script>
-<script type="text/javascript" src="https://cdn.senior.com.br/bpm/1.10.0/workflow-cockpit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 
 <head>
@@ -13,38 +12,51 @@
   <link rel="shortcut icon" href="/public/images/ico.fav" />
 </head>
 
-<body>
+<h1>
+  Cadastro de Contas
+</h1>
+
+<body onload="prenchedata()">
     <div class="esquerda">
         <label class="input2" for="fdata">Data</label>
         <input class="input" type="date" id="fdata" tipo="fdata"> <br> 
         <label class="input2" for="ftipo">Tipo</label>
-        <input class="input" type="text" id="ftipo" tipo="ftipo"><br> 
+        <input class="input2" list="ftipolist" id="ftipo">
+        <datalist class="input2" id="ftipolist" >
+          <option value="Carro" id="Carro">
+          <option value="Mercado" id="Mercado">
+          <option value="Saude" id="Saude">
+          <option value="Superfulo" id="Superfulo">
+          <option value="Eletrodomestico" id="Eletrodomestico"></option>
+          <option value="Tarifas\Juros" id="Tarifas"></option>
+          <option value="Casa" id="Casa"></option>
+          <option value="Contas Consumo" id="Consumo"></option>
+          <option value="Pet" id="Pet">
+        </datalist><br/>
+
         <label class="input2" for="fdescricao">Descrição</label>
         <input class="input" type="text" id="fdescricao" tipo="fdescricao"><br> 
         <label class="input2" for="fvalor">Valor</label>
         <input class="input" type="number" placeholder="0.00" id="fvalor" tipo="fvalor"><br>
-        <div>
-            <button class="input" type='reset' onclick="inserir(); " >Inserir Dados</button>
-        </div> 
+        <button class="input" type='reset' onclick="inserir(); " >Inserir</button>
+        <button class="input2" type='reset' onclick="alterar(); " >Alterar</button>
+        <button class="input2" type='reset' onclick="excluir(); " >Excluir</button>
+        <h1>
+          <label class="input" >Total</label>
+          <label class="input" id="totalGeral"></label>
+        </h1>
+        <p>
+          
+        </p>
     </div>
 
     <div class="direita">
-        <table>
-            <tr>
-              <th>Company</th>
-              <th>Contact</th>
-              <th>Country</th>
-            </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-            </tr>
-            <tr>
-              <td>Centro comercial Moctezuma</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-            </tr>
-          </table>
+      <label class="input2" for="fdataInicio">Data</label>
+      <input class="input" type="date" id="fdataInicio" tipo="fdata">  
+      <input class="input" type="date" id="fdataFim" tipo="fdata" onchange="pesquisar()"> <br> 
+
+      <ul class="input" id="listacontas">
+      </ul>
+      
     </div>
 </body>

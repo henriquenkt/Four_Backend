@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
-const schema = require("./src/modules/schema");
+const schema = require("./src/modules/CadastroUsuarios/schema");
 const mongoose = require("mongoose");
 const admin = require("./routes/admin");
 const cors = require('cors');
-const mongoschema = require("./src/modules/schema");
+//const mongoschema = require("./src/modules/schema");
 var porta = 3000;
 require('node-windows');
 
@@ -31,7 +31,7 @@ for (let cont = 0; cont < 10; cont = cont + 1) {
 }
 
 // outros
-mongoschema();
+//mongoschema();
 
 // Server
 app.listen(porta, function() {
