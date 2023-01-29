@@ -1,5 +1,5 @@
 {
-  "name": "cadastro",
+  "name": "four_backend",
   "version": "1.0.0",
   "description": "Server teste",
   "main": "app.js",
@@ -16,10 +16,15 @@
     "soap": "^0.43.0"
   },
   "scripts": {
-    "start": "app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "NakataH",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": " "
+  }
 }

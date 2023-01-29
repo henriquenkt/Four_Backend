@@ -1,15 +1,15 @@
 <service>
-	<id>servernode.exe</id>
-	<name>ServerNode</name>
-	<description>Site de Cadastro</description>
+	<id>servernodefour.exe</id>
+	<name>ServerNodeFour</name>
+	<description>Site Four</description>
 	<executable>C:\Program Files\nodejs\node.exe</executable>
 	<argument>--harmony</argument>
-	<argument>c:\Users\henri\Desktop\Dev\Cadastro\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>c:\Users\henri\Desktop\Dev\Four_Backend\node_modules\node-windows\lib\wrapper.js</argument>
 	<argument>--file</argument>
-	<argument>C:\Users\henri\Desktop\Dev\Cadastro\app.js</argument>
+	<argument>C:\Users\henri\Desktop\Dev\Four_Backend\app.js</argument>
 	<argument>--scriptoptions=</argument>
 	<argument>--log</argument>
-	<argument>ServerNode wrapper</argument>
+	<argument>ServerNodeFour wrapper</argument>
 	<argument>--grow</argument>
 	<argument>0.25</argument>
 	<argument>--wait</argument>
@@ -27,5 +27,5 @@
 		<user>LocalSystem</user>
 		<password></password>
 	</serviceaccount>
-	<workingdirectory>c:\Users\henri\Desktop\Dev\Cadastro</workingdirectory>
+	<workingdirectory>c:\Users\henri\Desktop\Dev\Four_Backend</workingdirectory>
 </service>

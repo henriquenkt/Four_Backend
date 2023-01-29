@@ -1,136 +1,99 @@
 const express = require("express");
 const app = express();
 const router = express.Router();
-const crud = require("../src/modules/CadastroUsuarios/crud");
-const crudFinanceiro = require("../src/modules/Financeiro/crud");
-const soap = require("soap");
+const crud = require("../src/modules/Cadastros/crud");
 
 bodyParser = require('body-parser');
 router.use(bodyParser.json());
 router.use(bodyParser.text({ type: '*/*' }));
 
 /**
- * CADASTROS DE USUARIOS
+ * Rotas para cadastro e pesquisa de parceiros
  */
-
-// Cadastro de usuarios
- router.get("/", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/CadastroUsuarios/cadastro_usuario.html");
-});
-
-// Busca cadastros
-router.get("/relacao", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/CadastroUsuarios/relacao.html");
-});
-
-
-router.post("/inserir", async function(req, res) {
-  var cadastro = req.body;
-  await crud('usuario',cadastro, 'insert');
-  res.redirect("/");
-  res.end();
-});
-
-router.post("/alterar", async function(req, res) {
-  var cadastro = req.body;
-  await crud('usuario',cadastro, 'update');
-  res.redirect("/");
-  res.end();
-});
-
-router.post("/excluir", async function(req, res) {
-  var cadastro = req.body;
-  await crud('usuario',cadastro, 'delete');
-  res.redirect("/");
-  res.end();
-});
-
-router.post("/pesquisar", async function(req, res) {
-  var cadastro = req.body;
-  retorno = await crud('usuario',cadastro, 'find');
-  res.send(retorno);
-});
-
-router.post("/ultimoReg", async function(req, res) {
-  var cadastro = req.body;
-  retorno = await crud('usuario',cadastro, 'lastCode');
-  res.send(retorno);
-});
-
-router.post("/proximo", async function(req, res) {
-  var cadastro = req.body;
-  retorno = await crud('usuario', cadastro, 'next');
-  res.send(retorno);
-});
-
-router.post("/anterior", async function(req, res) {
-  var cadastro = req.body;
-  retorno = await crud('usuario', cadastro, 'previous');
-  res.send(retorno);
-});
+funcRotas('parceiros');
 
 /**
- * CONTAS
+ * Rotas para cadastro e pesquisa de recursos
  */
-
-// Cadastro de contas
-router.get("/contas", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/Financas/contas.html");
-});
-
-// Busca cadastros
-router.post("/contas/pesquisar", async function(req, res) {
-  var cadastro = req.body;
-  retorno = await crudFinanceiro('contas',cadastro, 'find');
-  res.send(retorno);
-});
-
-router.post("/contas/inserir", async function(req, res) {
-  var cadastro = req.body;
-  await crudFinanceiro('contas',cadastro, 'insert');
-  res.redirect("/");
-  res.end();
-});
-
-router.post("/contas/alterar", async function(req, res) {
-  var cadastro = req.body;
-  await crudFinanceiro('contas',cadastro, 'update');
-  res.redirect("/");
-  res.end();
-});
-
-router.post("/contas/excluir", async function(req, res) {
-  var cadastro = req.body;
-  await crud('contas',cadastro, 'delete');
-  res.redirect("/");
-  res.end();
-});
+funcRotas('recursos');
 
 /**
- * Outros
+ * Rotas para cadastro e pesquisa de clientes
  */
-router.get("/bpm", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/bpm.html");
-});
+funcRotas('clientes');
 
-router.get("/ventura", function(req, res) {
-    res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/carregar.html");
-})
+/**
+ * Rotas para cadastro e pesquisa de empresa
+ */
+funcRotas('empresas');
 
-router.get("/horas", function(req, res) {
-  res.sendFile("C:/Users/henri/Desktop/Dev/Cadastro/src/public/html/horas.html");
-})
+/**
+ * Rotas para lançamento de creditos
+ */
+ funcRotas('creditos');
+
+ /**
+ * Rotas para lancamento de debitos
+ */
+  funcRotas('debitos');
+
+ /**
+ * Rotas para lancamento de rats
+ */
+  funcRotas('rats');
+
+ /**
+ * Rotas para lancamento de rdvs
+ */
+  funcRotas('rdvs');
 
 
-router.post("/stoller", async function(req, res) {
-  app.use(bodyParser.urlencoded({
-    parameterLimit: 10000000,
-    limit: '500mb',
-    extended: true
-  }));
-  var cadastro = req.body;
-  
-  res.send(cadastro);
-});
+/**
+ * Rotas para cadastro e pesquisa de usuarios
+ */
+router.
+  post("/authenticate", async function (req, res) {
+    retorno = await crud('users', req.body, 'authenticate');
+    vazio = JSON.stringify(req.body);
+    authenticate = `{"autorizado": ${(retorno.length == 0 || vazio == '{}' ? false : true)}}`
+    authenticate = JSON.stringify(authenticate)
+    authenticate = JSON.parse(authenticate)
+    res.send(authenticate);
+  })
+  .post("/newUser", async function (req, res) {
+    retorno = await crud('users', req.body, 'newUser');
+    res.send(retorno);
+  });
+
+  function funcRotas(rota) {
+    router.
+      post(`/${rota}`, async function (req, res) {
+        retorno = await crud(rota, req.body, 'lastCode');
+        if (retorno.length > 0)
+          req.body.codigo = retorno[0].codigo + 1;
+        else
+          req.body.codigo = 1;
+        await crud(rota, req.body, 'insert');
+        req.body.resultado = "Inserido com sucesso.";
+        res.json(req.body);
+        res.end();
+      })
+      .put(`/${rota}`, async function (req, res) {
+        await crud(rota, req.body, 'update');
+        req.body.resultado = "Atualizado com sucesso.";
+        res.json(req.body);
+        res.end();
+      })
+      .delete(`/${rota}`, async function (req, res) {
+        await crud(rota, req.body, 'delete');
+        req.body.resultado = "Excluido com sucesso.";
+        res.json(req.body);
+        res.end();
+      })
+      .post(`/pesquisar${rota}`, async function (req, res) {
+        retorno = await crud(rota, req.body, 'find');
+        res.send(retorno);
+      })
+  }
 
 module.exports = router;

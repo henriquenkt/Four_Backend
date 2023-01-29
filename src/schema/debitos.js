@@ -1,37 +1,33 @@
 function mongoschema() {
   const mongoose = require("mongoose");
-  var usuarioSchema = mongoose.Schema({
-	codigo: {
+  var usuarioSchema = new mongoose.Schema({
+    codigo: {
       type: Number,
       require: true
     },
-	nome: {
+    data: {
       type: String,
       require: true
     },
-	usuCloud: {
+    descricao: {
       type: String,
       require: true
     },
-	senCloud: {
+    tipo: {
       type: String,
       require: true
     },
-	usuario: {
+    valor: {
       type: String,
       require: true
     },
-	senha: {
-      type: String,
-      require: true
-    },
-	textoLivre: {
+    observacao: {
       type: String,
       require: true
     }
   })
   //Collection
-  return mongoose.model('usuario', usuarioSchema);
+  return mongoose.model('debitos', usuarioSchema);
 }
 
 module.exports = mongoschema;

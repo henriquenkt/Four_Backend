@@ -1,0 +1,4 @@
+2023-01-27 08:26:38 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Four_Backend\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Four_Backend\app.js --scriptoptions= --log "ServerNodeFour wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-27 08:26:38 - Started 2276
+2023-01-27 08:28:44 - Starting C:\Program Files\nodejs\node.exe  --harmony c:\Users\henri\Desktop\Dev\Four_Backend\node_modules\node-windows\lib\wrapper.js --file C:\Users\henri\Desktop\Dev\Four_Backend\app.js --scriptoptions= --log "ServerNodeFour wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-01-27 08:28:45 - Started 9360

@@ -1,43 +1,51 @@
 const express = require("express");
 const app = express();
-const schema = require("./src/modules/CadastroUsuarios/schema");
 const mongoose = require("mongoose");
 const admin = require("./routes/admin");
 const cors = require('cors');
-//const mongoschema = require("./src/modules/schema");
-var porta = 3000;
+// var porta = 4100;
 require('node-windows');
+const mongoschema = require("./src/schema/parceiros");
+const mongoschemaUser = require("./src/schema/user");
+const mongoschemaRecursos = require("./src/schema/recursos");
+const mongoschemaClientes = require("./src/schema/clientes");
+const mongoschemaEmpresas = require("./src/schema/empresas");
+const mongoschemaLancamentos = require("./src/schema/lancamentos");
+const mongoschemaCreditos = require("./src/schema/creditos");
+const mongoschemaDebitos = require("./src/schema/debitos");
+const mongoschemaRats = require("./src/schema/rats");
+mongoschema();
+mongoschemaRecursos();
+mongoschemaUser();
+mongoschemaClientes();
+mongoschemaEmpresas();
+mongoschemaLancamentos();
+mongoschemaCreditos();
+mongoschemaDebitos();
+mongoschemaRats();
 
 app.use(express.static('src'));
 app.use(cors()); 
 
 // conexao mongodb
-mongoose.connect('mongodb://localhost:27017/documents', {
+//  mongoose.connect('mongodb://localhost:27017/four', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// }); 
+
+  mongoose.connect('mongodb+srv://henriquenkt:VbaEdVQUsjCYyELc@cloudmd.0d9bib2.mongodb.net/cloudmd', {
   useNewUrlParser: true,
   useUnifiedTopology: true
-});
+});  
 
 // routes
 app.use("/", admin);
 
-var date = new Date();
-var datahoje = new Date().toISOString().split('T')[0];
-var datat = datahoje[0];
-let teste = 0;
-for (let cont = 0; cont < 10; cont = cont + 1) {
-  //var registro =  historicoBpm.data.timeline[cont];
-  teste = teste + 1 ;
-  //aprovado = (registro.actionName == "Concluir" && registro.taskName == "Confirmação" ? true : aprovado);
-}
-
-// outros
-//mongoschema();
-
 // Server
-app.listen(porta, function() {
+// app.listen(porta, function() {
  
-  console.log("servidor rodando na porta: " + porta);
-});
+//   console.log("servidor rodando na porta: " + porta);
+// });
 
 
 
