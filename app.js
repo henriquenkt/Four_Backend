@@ -45,7 +45,7 @@ app.use("/", admin);
 app.listen(process.env.PORT || 3000);
 // app.listen(porta, function() {
  
-   console.log("servidor rodando na porta: " + porta);
+   //console.log("servidor rodando na porta: " + porta);
 // });
 
 
