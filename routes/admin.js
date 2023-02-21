@@ -37,6 +37,11 @@ funcRotas('empresas');
  */
   funcRotas('debitos');
 
+   /**
+ * Rotas para lancamento de debitos
+ */
+   funcRotas('lancamentos');
+
  /**
  * Rotas para lancamento de rats
  */
