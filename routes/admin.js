@@ -40,7 +40,7 @@ funcRotas('empresas');
    /**
  * Rotas para lancamento
  */
-   funcRotas('lancamentos');
+   funcRotas('lancamentos'); 
 
  /**
  * Rotas para lancamento de rats
