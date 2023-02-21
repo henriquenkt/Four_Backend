@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const admin = require("./routes/admin");
 const cors = require('cors');
 // var porta = 4100;
-require('node-windows');
+//require('node-windows');
 const mongoschema = require("./src/schema/parceiros");
 const mongoschemaUser = require("./src/schema/user");
 const mongoschemaRecursos = require("./src/schema/recursos");
