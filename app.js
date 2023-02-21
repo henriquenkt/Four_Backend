@@ -42,6 +42,7 @@ app.use(cors());
 app.use("/", admin);
 
 // Server
+app.listen(process.env.PORT || 3000);
 // app.listen(porta, function() {
  
 //   console.log("servidor rodando na porta: " + porta);
